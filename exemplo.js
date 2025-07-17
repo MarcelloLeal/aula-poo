@@ -30,7 +30,7 @@ class ContaCorrente extends ContaBancaria{
     sacar (valor){
         const saldoDisponivel = this.saldo + this.limiteChequeEspecial
         if (valor > 0 && saldoDisponivel >= valor){
-            console.log(`Saldo inicial: R$${this.saldo.toFixed(2)}`)
+            console.log(`Saldo inicial: R$${this.saldo.toFixed}`)
             console.log(`Saque de R$${valor.toFixed(2)} realizado`) 
             console.log(`Saldo atual: ${this.saldo - saldoDisponivel}. Você está utilizando o Cheque Especial.`)                       
             return true
@@ -41,6 +41,7 @@ class ContaCorrente extends ContaBancaria{
 }
 const cc = new ContaCorrente ("Maria", 300, 500)
 cc.sacar(800)
+// 
 
 
 
